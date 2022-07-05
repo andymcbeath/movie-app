@@ -1,0 +1,5 @@
+### Movies all_movies
+GET http://localhost:3000/all_movies.json 
+
+### Movie one_movie
+GET http://localhost:3000/one_movie.json 
