@@ -1,13 +1,73 @@
-### Movies all_movies
-GET http://localhost:3000/movies.json 
+### Actors Index
+GET http://localhost:3000/actors.json 
 
-### Movies
-GET http://localhost:3000/movies/2.json 
-
-### Display Body Param
-POST http://localhost:3000/localhost:3000/movies.json
-content-type: application/json
+### Actors Create
+POST http://localhost:3000/actors.json
+Content-Type: application/json
 
 {
-  "title": "I'm a movie"
+"first_name": "Test Name",
+"last_name": "Test Last Name",
+"known_for": "Test thing they're known for"
 }
+
+### Actors Show
+GET http://localhost:3000/actors/1.json
+
+### Actors Update
+PATCH http://localhost:3000/actors/1.json 
+Content-Type: application/json
+
+{
+"first_name": "New First Name",
+"last_name": "New Last Name",
+"known_for": "Something Else Known For"
+}
+
+# ### Display Body Param for movie
+# POST http://localhost:3000/localhost:3000/movies.json
+# content-type: application/json
+
+# {
+#   "title": "I'm a movie"
+# }
+
+### Actors Destroy
+DELETE http://localhost:3000/actors/1.json
+
+### Movies Index
+GET http://localhost:3000/movies.json 
+
+### Movies Create
+POST http://localhost:3000/movies.json
+Content-Type: application/json
+
+{
+"title": "Test Title",
+"year": 2032,
+"plot": "Test Plot"
+}
+
+### Movies Show
+GET http://localhost:3000/movies/1.json
+
+### Movies Update
+PATCH http://localhost:3000/movie/1.json 
+Content-Type: application/json
+
+{
+  "title": "New Title",
+  "year": 2020,
+  "plot": "New Plot"
+}
+
+# ### Display Body Param
+# POST http://localhost:3000/localhost:3000/movies.json
+# content-type: application/json
+
+# {
+#   "title": "I'm a movie"
+# }
+
+### Movies Destroy
+DELETE http://localhost:3000/movies/1.json
