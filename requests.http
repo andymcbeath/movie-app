@@ -1,5 +1,13 @@
 ### Movies all_movies
-GET http://localhost:3000/all_movies.json 
+GET http://localhost:3000/movies.json 
 
-### Movie one_movie
-GET http://localhost:3000/one_movie.json 
+### Movies
+GET http://localhost:3000/movies/2.json 
+
+### Display Body Param
+POST http://localhost:3000/localhost:3000/movies.json
+content-type: application/json
+
+{
+  "title": "I'm a movie"
+}
