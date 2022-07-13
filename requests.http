@@ -15,7 +15,7 @@ Content-Type: application/json
 GET http://localhost:3000/actors/1.json
 
 ### Actors Update
-PATCH http://localhost:3000/actors/1.json 
+PATCH http://localhost:3000/actors/2.json 
 Content-Type: application/json
 
 {
@@ -52,7 +52,7 @@ Content-Type: application/json
 GET http://localhost:3000/movies/1.json
 
 ### Movies Update
-PATCH http://localhost:3000/movie/1.json 
+PATCH http://localhost:3000/movies/3.json 
 Content-Type: application/json
 
 {
@@ -70,4 +70,4 @@ Content-Type: application/json
 # }
 
 ### Movies Destroy
-DELETE http://localhost:3000/movies/1.json
+DELETE http://localhost:3000/movies/2.json
