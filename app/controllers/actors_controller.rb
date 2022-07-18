@@ -1,4 +1,6 @@
 class ActorsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @actors = Actor.all
     render json: @actors.as_json
@@ -11,7 +13,7 @@ class ActorsController < ApplicationController
       known_for: params[:known_for],
       gender: params[:gender],
       age: params[:age],
-      movie_id: params[:movie_id]
+      movie_id: params[:movie_id],
     )
     if @actor.save
       render :show
@@ -39,6 +41,7 @@ class ActorsController < ApplicationController
     else
       render json: { errors: @actor.errors.full_messages },
              status: 418
+    end
   end
 
   def destroy

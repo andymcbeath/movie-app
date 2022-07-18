@@ -12,10 +12,10 @@ Content-Type: application/json
 }
 
 ### Actors Show
-GET http://localhost:3000/actors/1.json
+GET http://localhost:3000/actors/9.json
 
 ### Actors Update
-PATCH http://localhost:3000/actors/2.json 
+PATCH http://localhost:3000/actors/9.json 
 Content-Type: application/json
 
 {
@@ -40,6 +40,7 @@ GET http://localhost:3000/movies.json
 
 ### Movies Create
 POST http://localhost:3000/movies.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNDEwNjV9.cj_jgV_0TUpgvSHzCW3DSvIF3Uyssqp7UwI1d3DQI1Y
 Content-Type: application/json
 
 {
@@ -71,3 +72,23 @@ Content-Type: application/json
 
 ### Movies Destroy
 DELETE http://localhost:3000/movies/2.json
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Test name 3",
+  "email": "testers@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
